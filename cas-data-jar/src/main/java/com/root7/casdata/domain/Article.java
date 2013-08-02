@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -29,6 +31,18 @@ public class Article implements Serializable {
 	private List<String> tags;
 	
 	private String title;
+	
+	private ArticleStatistic titleStatistics;
+	
+	private ArticleStatistic bodyStatistics;
+	
+	private ArticleStatistic titleBodyStatistics;
+	
+	private Set<Integer> titleFullStops;
+	
+	private Set<Integer> bodyFullStops;
+	
+	private Set<Integer> titleBodyFullStops;
 
 	public String getId() {
 		return id;
@@ -100,6 +114,54 @@ public class Article implements Serializable {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public ArticleStatistic getTitleStatistics() {
+		return titleStatistics;
+	}
+
+	public void setTitleStatistics(ArticleStatistic titleStatistics) {
+		this.titleStatistics = titleStatistics;
+	}
+
+	public ArticleStatistic getBodyStatistics() {
+		return bodyStatistics;
+	}
+
+	public void setBodyStatistics(ArticleStatistic bodyStatistics) {
+		this.bodyStatistics = bodyStatistics;
+	}
+
+	public ArticleStatistic getTitleBodyStatistics() {
+		return titleBodyStatistics;
+	}
+
+	public void setTitleBodyStatistics(ArticleStatistic titleBodyStatistics) {
+		this.titleBodyStatistics = titleBodyStatistics;
+	}
+
+	public Set<Integer> getTitleFullStops() {
+		return titleFullStops;
+	}
+
+	public void setTitleFullStops(Set<Integer> titleFullStops) {
+		this.titleFullStops = titleFullStops;
+	}
+
+	public Set<Integer> getBodyFullStops() {
+		return bodyFullStops;
+	}
+
+	public void setBodyFullStops(Set<Integer> bodyFullStops) {
+		this.bodyFullStops = bodyFullStops;
+	}
+
+	public Set<Integer> getTitleBodyFullStops() {
+		return titleBodyFullStops;
+	}
+
+	public void setTitleBodyFullStops(Set<Integer> titleBodyFullStops) {
+		this.titleBodyFullStops = titleBodyFullStops;
 	}
 
 }
