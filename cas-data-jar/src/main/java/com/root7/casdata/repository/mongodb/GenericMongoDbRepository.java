@@ -69,6 +69,11 @@ public abstract class GenericMongoDbRepository <T, ID extends Serializable> impl
 		 return this.mongoTemplate.findById(id, getEntityClass() , collectionName);
 	}
 	
+	
+	public List<T> findAll()
+	{
+		return this.mongoTemplate.findAll(getEntityClass(), this.collectionName);
+	}
 
 	public List<T> findAll(String collectionName)
 	{

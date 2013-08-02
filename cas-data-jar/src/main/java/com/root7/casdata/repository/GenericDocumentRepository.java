@@ -10,6 +10,8 @@ public interface GenericDocumentRepository <T, ID extends Serializable>
 	
 	T findById(ID id, String collectionName);
 	
+	List<T> findAll();
+	
 	List<T> findAll(String collectionName);
 	
 	T save(T entity, String collectionName);
