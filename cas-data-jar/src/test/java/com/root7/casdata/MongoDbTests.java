@@ -30,7 +30,7 @@ import com.mongodb.MongoClient;
 
 @SuppressWarnings("unused")
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="MongoDbTests-context.xml")
+@ContextConfiguration()
 public class MongoDbTests {
 	
 	@Autowired
