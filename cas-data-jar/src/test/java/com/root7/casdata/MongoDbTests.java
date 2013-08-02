@@ -60,7 +60,7 @@ public class MongoDbTests {
 	@Test
 	public void FindAllArticles()
 	{
-		List<Article> articles = repo.findAll("articles");
+		List<Article> articles = repo.findAll();
 		
  		Assert.isTrue(articles.size() > 0);
 	}
